@@ -59,6 +59,8 @@ get_similar_words = st.button(label = "get_similar_words", on_click= click_get_s
 
 if st.session_state.clicked_get_similar_words:
 
+    model = load_model(model_name)
+
     words_list1  = w2v.preprocess(text1)
     words_list2 =  w2v.preprocess(text2)
 
