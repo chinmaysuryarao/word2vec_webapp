@@ -24,12 +24,12 @@ def load_model(model_name):
         print(f" Exception {ex} occurred. ")
 
 
-st.header("Word2Vec Example", divider='rainbow')
+st.header("Calculate Sentence Similarity: ", divider='rainbow')
 
 
 model_name = st.selectbox(
     "Which model you would like to select ?",
-    ("word2vec-google-news-300", "glove-twitter-25")
+    ("glove-wiki-gigaword-50","glove-wiki-gigaword-100", "glove-twitter-25", "glove-twitter-50")
     )
 
 text1 = st.text_input(label = "Enter text")
